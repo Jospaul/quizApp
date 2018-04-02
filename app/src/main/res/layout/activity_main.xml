@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/friendsappback"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Select One to check your knowledge!!"
+        android:textColor="#f9fbe7"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/button_chandler"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:onClick="clickChandler"
+            android:scaleType="centerCrop"
+            android:src="@drawable/chandler" />
+
+        <ImageButton
+            android:id="@+id/button_monica"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:onClick="clickMonica"
+            android:scaleType="centerCrop"
+            android:src="@drawable/monica" />
+
+        <ImageButton
+            android:id="@+id/button_ross"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:onClick="clickRoss"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ross" />
+
+        <ImageButton
+            android:id="@+id/button_rachel"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:onClick="clickRachel"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rachel" />
+
+        <ImageButton
+            android:id="@+id/button_joey"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:onClick="clickJoey"
+            android:scaleType="centerCrop"
+            android:src="@drawable/joey" />
+
+        <ImageButton
+            android:id="@+id/button_phoebe"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:onClick="clickPhoebe"
+            android:scaleType="centerCrop"
+            android:src="@drawable/phoebe" />
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:fadeScrollbars="false">
+
+        <LinearLayout
+            android:id="@+id/quizQuestions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:textSize="14sp"
+                android:textColor="#f9fbe7"
+                android:text="How well do you know Friend's?" />
+
+            <EditText
+                android:id="@+id/ans1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="@string/question1"
+                android:textSize="14sp"
+                android:textColorHint="#f9fbe7"
+                android:textColor="#dce775"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/ans2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="@string/question2"
+                android:textSize="14sp"
+                android:textColorHint="#f9fbe7"
+                android:textColor="#dce775"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/q3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="@string/question3"
+                android:textColor="#f9fbe7"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/radioQues"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioAns1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/radioAns1"
+                    android:textSize="14sp"
+                    android:textColor="#f9fbe7"
+                    android:buttonTint="#e1f5fe"
+                    />
+
+                <RadioButton
+                    android:id="@+id/radioAns2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/radioAns2"
+                    android:textSize="14sp"
+                    android:textColor="#f9fbe7"
+                    android:buttonTint="#e1f5fe"/>
+
+                <RadioButton
+                    android:id="@+id/radioAns3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/radioAns3"
+                    android:textSize="14sp"
+                    android:textColor="#f9fbe7"
+                    android:buttonTint="#e1f5fe"/>
+
+                <RadioButton
+                    android:id="@+id/radioAns4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/radioAns4"
+                    android:textSize="14sp"
+                    android:textColor="#f9fbe7"
+                    android:buttonTint="#e1f5fe"/>
+            </RadioGroup>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/resultView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=""
+        android:textAllCaps="true"
+        android:textSize="24sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="resetAll"
+        android:text="play again!!!"
+        android:textAllCaps="true"
+        android:background="#f3e5f5"
+        android:textColor="#4a148c"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/questionsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/questionsCount"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Questions Attempted:"
+            android:textSize="16sp"
+            android:textColor="#f9fbe7"/>
+
+        <TextView
+            android:id="@+id/questionsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:text=" 0"
+            android:textSize="30sp"
+            android:textColor="#f9fbe7"/>
+
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/scoreCount"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Score:"
+            android:textSize="16sp"
+            android:textColor="#f9fbe7"/>
+
+        <TextView
+            android:id="@+id/scoreCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textColor="#ff1744"
+            android:layout_marginRight="16dp"
+            android:text=" 0"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+</LinearLayout>
+

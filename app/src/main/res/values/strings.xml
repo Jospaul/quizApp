@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="question1">Question 1</string>
+    <string name="question2">Question 2</string>
+    <string name="question3">Question 3</string>
+    <string name="radioAns1">Answer 1</string>
+    <string name="radioAns2">Answer 2</string>
+    <string name="radioAns3">Answer 3</string>
+    <string name="radioAns4">Answer 4</string>
+
+</resources>
